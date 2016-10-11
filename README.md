@@ -23,7 +23,7 @@ ____
 var now = newDate();  
 var now = newDate(""); 
 ```
-#### Passing `date`*s*, `modifiers` and `weekday` Parameters
+## Passing `date`, `modifiers` and `weekday` Parameters
 
 
 **Get date from specific date**
