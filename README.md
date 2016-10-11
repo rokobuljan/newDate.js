@@ -86,5 +86,5 @@ To recap:
 **Modifiers** String Number can have a positive or negative `+`*(optional)* or `-` **prefix**,  and **must be suffixed** by `d`, `m` or `y`.<br>
 You can combine you modifiers any way you want by using **comma delimiter**: `"+3d,+2y,-4m"` *(order is unspecific)*
 
-**Weekday** String Number can have a positive or negative character prefix  `+`*(optional)*, `-`, followed by a number from 0 to 6.  
+**Weekday** String Number can have a positive or negative character prefix  `+`*(optional)*, `-`, followed by a number from 0 to 6 representing a desired weekday stop.  
 Use this parameter to get you to the closest desired weekday *(see use-cases in the examples above)*.
