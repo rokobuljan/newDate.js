@@ -81,6 +81,8 @@ ___
 
 To recap:  
 
+**Date** is a value representing the start date.
+
 **Modifiers** String Number can have a positive or negative `+`*(optional)* or `-` **prefix**,  and **must be suffixed** by `d`, `m` or `y`.<br>
 You can combine you modifiers any way you want by using **comma delimiter**: `"+3d,+2y,-4m"` *(order is unspecific)*
 
