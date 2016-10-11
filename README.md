@@ -10,7 +10,7 @@ newDate( "date", "modifiers", "weekday" )
 | :---  | :---    | :---               |  :---           |
 | date  | string, number, object | A Start date. Valid Date String, timestamp or dateObject  |  `""` (current Date)<br> `"2/20/2017"` <br> `"2-20-2017"`<br>`"1494131242686"`<br>`1494131242686`<br>`new Date(2017,1,20)` |
 | modifiers | string | Comma delimited modifiers `"(+-)N[d|m|y](, ...)"` | `""` *(no modifier)*<br>`"1d"` (or `"+1d"`),<br>`"-21d"`<br> `"+2y,-2m,+2d"` |
-| weekday | string | String Number representing the weekday Number `"(+-)N"` where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
+| weekday | string | String Number representing the weekday Number `"(+-)N"`<br>where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
 
 Returns a **new Date Object** `[object Date] { ... }`
 
