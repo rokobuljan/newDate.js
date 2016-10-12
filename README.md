@@ -23,7 +23,8 @@ ____
 var now = newDate();  
 var now = newDate(""); 
 ```
-## Passing `date`, `modifiers` and `weekday` Parameters
+
+## Using the `date` Parameter
 
 
 **Get date from specific date**
@@ -32,6 +33,8 @@ var raceStartDate =       newDate("2/20/2017");
 var raceStartDate =       newDate("2-20-2017"); 
 var raceStartDate =       newDate(new Date(2017, 1, 20)); // Inside Date Object raw Months are 0 based! 0 - 11
 ```
+
+## Using the `modifiers` Parameter
 
 **Get date 14 days from today**
 ```
@@ -52,6 +55,8 @@ var getThatDate =         newDate("", "+2y,-5m,+21d");
 ```
 var twoDaysBeforeEvent =  newDate("6/16/2017", "-2d");  
 ```
+
+## Using the `weekday` Parameter
 
 **Get following Wednesday date** or **return today's date** if today is that Wednesday
 ```
