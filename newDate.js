@@ -1,5 +1,6 @@
 /**
 * newDate() - Get a new Date by passing extra parameters - by roko.cb
+* - https://github.com/rokobuljan/newDate.js
 * @param {(string|number|object)} date - String, timestamp or Date Object
 * @param {string} modifiers - Adds or subtracts. "+7d" or like "-1y,+2m,+14d"
 * @param {string} weekday - To nearest weekday "0"(Sun) "6"(Sat). "-0" for previous Sunday
