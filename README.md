@@ -28,44 +28,44 @@ var now = newDate("");
 
 **Get date from specific date**
 ```
-var raceStartDate       = newDate("2/20/2017");  
-var raceStartDate       = newDate("2-20-2017"); 
-var raceStartDate       = newDate(new Date(2017, 1, 20)); // Inside Date Object raw Months are 0 based! 0 - 11
+var raceStartDate =       newDate("2/20/2017");  
+var raceStartDate =       newDate("2-20-2017"); 
+var raceStartDate =       newDate(new Date(2017, 1, 20)); // Inside Date Object raw Months are 0 based! 0 - 11
 ```
 
 **Get date 14 days from today**
 ```
-var twoWeeksFromNow     = newDate("", "+14d");  
+var twoWeeksFromNow =     newDate("", "+14d");  
 ```
 
 **Get date before six months**
 ```
-var beforeSixMonths     = newDate("", "-6m"); 
+var sixMonthsAgo =        newDate("", "-6m"); 
 ```
 
 **Get date in 2 years, minus 5 months and plus three weeks** *(why not ;))*
 ```
-var getThatDate         = newDate("", "+2y,-5m,+21d");  
+var getThatDate =         newDate("", "+2y,-5m,+21d");  
 ```
 
 **Get specific m/d/yyyy date minus dwo days**
 ```
-var twoDaysBeforeEvent  = newDate("6/16/2017", "-2d");  
+var twoDaysBeforeEvent =  newDate("6/16/2017", "-2d");  
 ```
 
 **Get following Wednesday date** or **return today's date** if today is that Wednesday
 ```
-var twoDaysBeforeEvent  = newDate("", "", "4");  
+var thisWednesday =       newDate("", "", "4");  
 ```
 
 **Get following Wednesday date** or **return next week's Wednesday date** if today is that Wednesday
 ```
-var twoDaysBeforeEvent  = newDate("", "+1d", "4");  
+var nextWednesday =       newDate("", "+1d", "4");  
 ```
 
 **Get previous Wednesday date**
 ```
-var twoDaysBeforeEvent  = newDate("", "", "-4");  
+var lastWednesday =       newDate("", "", "-4");  
 ```
 
 **Get distant Weekday dates**
