@@ -12,9 +12,9 @@ function newDate(date, modifiers, weekday) {
   } else if (typeof date !== "object") {
     date = new Date(date);
   }
-  if(modifiers && typeof modifiers === "string") {
+  if (modifiers && typeof modifiers === "string") {
     modifiers = modifiers.split(",");
-    while(modifiers.length) {
+    while (modifiers.length) {
       var mod = modifiers.shift(),
           num = mod.split(/[dmy]/i)[0],
           dmy = mod.replace(num,"") || "d",
@@ -26,7 +26,7 @@ function newDate(date, modifiers, weekday) {
       date = new Date(date[props[0]](date[props[1]]() + (+num)));
     }
   }
-  if(weekday && typeof weekday === "string"){
+  if (weekday && typeof weekday === "string") {
     var i = weekday.indexOf("-") > -1 ? -1 : 1;
     while (date.getDay() !== Math.abs(+weekday%7)) {
       date.setDate(date.getDate() + i);
