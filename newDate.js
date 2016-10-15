@@ -27,9 +27,9 @@ function newDate(date, modifiers, weekday) {
     }
   }
   if(weekday && typeof weekday === "string"){
-    var i = weekday.indexOf("-")>-1?-1:1;
+    var i = weekday.indexOf("-") > -1 ? -1 : 1;
     while (date.getDay() !== Math.abs(+weekday%7)) {
-      date.setDate(date.getDate()+i);
+      date.setDate(date.getDate() + i);
     }
   }
   return date;
