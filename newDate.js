@@ -14,16 +14,16 @@ function newDate(date, modifiers, weekday) {
   }
   if(modifiers && typeof modifiers === "string") {
     modifiers = modifiers.split(",");
-    while(modifiers.length){
+    while(modifiers.length) {
       var mod = modifiers.shift(),
           num = mod.split(/[dmy]/i)[0],
-          dmy = mod.replace(num,"")||"d",
+          dmy = mod.replace(num,"") || "d",
           props = {
-            y : ["setFullYear","getFullYear"],
-            m : ["setMonth","getMonth"],
-            d : ["setDate","getDate"]
+            y : ["setFullYear", "getFullYear"],
+            m : ["setMonth", "getMonth"],
+            d : ["setDate", "getDate"]
           }[dmy.toLowerCase()];
-      date = new Date(date[props[0]](date[props[1]]()+(+num)));
+      date = new Date(date[props[0]](date[props[1]]() + (+num)));
     }
   }
   if(weekday && typeof weekday === "string"){
