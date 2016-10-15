@@ -6,10 +6,10 @@
 * @param {string} weekday - To nearest weekday "0"(Sun) "6"(Sat). "-0" for previous Sunday
 * @return {object} - Returns a new Date Object with the reslut.
 */
-function newDate(date, modifiers, weekday){
-  if(!date){
+function newDate(date, modifiers, weekday) {
+  if (!date) {
     date = new Date();
-  }else if(typeof date !== "object"){
+  } else if (typeof date !== "object") {
     date = new Date(date);
   }
   if(modifiers && typeof modifiers === "string") {
