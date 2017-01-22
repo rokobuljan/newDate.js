@@ -9,7 +9,7 @@
 function newDate(date, modifiers, weekday) {
   if (!date) {
     date = new Date();
-  } else if (typeof date !== "object") {
+  }else{
     date = new Date(date);
   }
   if (modifiers && typeof modifiers === "string") {
