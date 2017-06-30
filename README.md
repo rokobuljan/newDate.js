@@ -6,11 +6,11 @@ A simple helper function to get dates the easy way
 newDate( "date", "modifiers", "weekday" )
 ```
 
-| Param | Value   |  Description       |  Value examples |
+| Param | Type   |  Description       |  Value examples |
 | :---  | :---    | :---               |  :---           |
-| date  | string, number, object | A Start date. Valid Date String, timestamp or dateObject  |  `""` (current Date)<br> `"2/28/2017"` <br> `"2-28-2017"` <br> `"2017-2-28"` <br> `"1488236400000"` <br> `1488236400000` <br> `new Date(2017,1,28)` |
-| modifiers | string | Comma delimited modifiers | `""` *(no modifier)*<br>`"1d"` (or `"+1d"`),<br>`"-21d"`<br> `"+2y,-2m,+2d"` |
-| weekday | string | String Number representing the weekday Number `"(-+)N"`<br>where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
+| date  | String, Number, Object | A Start date. Valid Date String, timestamp or dateObject  |  `""` (current Date)<br> `"2/28/2017"` <br> `"2-28-2017"` <br> `"2017-2-28"` <br> `"1488236400000"` <br> `1488236400000` <br> `new Date(2017,1,28)` |
+| modifiers | String | Comma delimited modifiers | `""` *(no modifier)*<br>`"1d"` (or `"+1d"`),<br>`"-21d"`<br> `"+2y,-2m,+2d"` |
+| weekday | String | String number representing the weekday Number `"(-+)N"`<br>where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
 
 Returns a **new Date Object** `[object Date] { ... }`
 
@@ -29,48 +29,48 @@ var now = newDate("");
 
 **Get date from specific date**
 ```
-var raceStartDate =       newDate("2/20/2017");  
-var raceStartDate =       newDate("2-20-2017"); 
-var raceStartDate =       newDate(new Date(2017, 1, 20)); // Inside Date Object raw Months are 0 based! 0 - 11
+var raceStartDate = newDate("2/20/2017");  
+var raceStartDate = newDate("2-20-2017"); 
+var raceStartDate = newDate(new Date(2017, 1, 20)); // Inside Date Object raw Months are 0 based! 0 - 11
 ```
 
 ## Using the `modifiers` Parameter
 
 **Get date 14 days from today**
 ```
-var twoWeeksFromNow =     newDate("", "+14d");  
+var twoWeeksFromNow = newDate("", "+14d");  
 ```
 
 **Get date before six months**
 ```
-var sixMonthsAgo =        newDate("", "-6m"); 
+var sixMonthsAgo = newDate("", "-6m"); 
 ```
 
 **Get date in 2 years, minus 5 months and plus three weeks** *(why not ;))*
 ```
-var getThatDate =         newDate("", "+2y,-5m,+21d");  
+var getThatDate = newDate("", "+2y,-5m,+21d");  
 ```
 
 **Get specific m/d/yyyy date minus dwo days**
 ```
-var twoDaysBeforeEvent =  newDate("6/16/2017", "-2d");  
+var twoDaysBeforeEvent = newDate("6/16/2017", "-2d");  
 ```
 
 ## Using the `weekday` Parameter
 
 **Get following Wednesday date** or **return today's date** if today is that Wednesday
 ```
-var thisWednesday =       newDate("", "", "4");  
+var thisWednesday = newDate("", "", "4");  
 ```
 
 **Get following Wednesday date** or **return next week's Wednesday date** if today is that Wednesday
 ```
-var nextWednesday =       newDate("", "+1d", "4");  
+var nextWednesday = newDate("", "+1d", "4");  
 ```
 
 **Get previous Wednesday date**
 ```
-var lastWednesday =       newDate("", "", "-4");  
+var lastWednesday = newDate("", "", "-4");  
 ```
 
 **Get distant Weekday dates**
