@@ -43,7 +43,7 @@ var twoWeeksFromNow = newDate("", "+14d");
 
 **Get date before six months**
 ```
-var sixMonthsAgo = newDate("", "-6m"); 
+var sixMonthsAgo = newDate("", "-6m");  // IMPORTANT! Read the "Gotchas" section below
 ```
 
 **Get date in 2 years, minus 5 months and plus three weeks** *(why not ;))*
