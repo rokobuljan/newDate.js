@@ -8,9 +8,9 @@ newDate( "date", "modifiers", "weekday" )
 
 | Param | Value   |  Description       |  Value examples |
 | :---  | :---    | :---               |  :---           |
-| date  | string, number, object | A Start date. Valid Date String, timestamp or dateObject  |  `""` (current Date)<br> `"2/20/2017"` <br> `"2-20-2017"`<br>`"1494131242686"`<br>`1494131242686`<br>`new Date(2017,1,20)` |
-| modifiers | string | Comma delimited modifiers `"(+-)N[d|m|y](, ...)"` | `""` *(no modifier)*<br>`"1d"` (or `"+1d"`),<br>`"-21d"`<br> `"+2y,-2m,+2d"` |
-| weekday | string | String Number representing the weekday Number `"(+-)N"`<br>where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
+| date  | string, number, object | A Start date. Valid Date String, timestamp or dateObject  |  `""` (current Date)<br> `"2/28/2017"` <br> `"2-28-2017"` <br> `"2017-2-28"` <br> `"1488236400000"` <br> `1488236400000` <br> `new Date(2017,1,28)` |
+| modifiers | string | Comma delimited modifiers | `""` *(no modifier)*<br>`"1d"` (or `"+1d"`),<br>`"-21d"`<br> `"+2y,-2m,+2d"` |
+| weekday | string | String Number representing the weekday Number `"(-+)N"`<br>where *N* is a range from 0-6 (0 being Sunday and 6 Saturday) | `"0"` (or `"+0"`) for nearest Sunday,<br> `"-0"` for previous Sunday |
 
 Returns a **new Date Object** `[object Date] { ... }`
 
@@ -81,10 +81,21 @@ var lastWednesday =       newDate("", "", "-4");
 // and must be in that week's Saturday instead             "+1y,-21d", "6"  (= Sat Oct 07 2017) 
 var nextYearMeetupDate  = newDate("10-23-2016", "+1y,-21d", "6");
 ```
+___
+
+## Gotchas
+
+Be advised that the month *Modifier* like `"+1m"` (or `"-1m"`) cannot automagically know the numbers of days you want to span.  
+Setting the initial Date to the Jan 31. and doing a *+1m* will not give the probably expected *Feb 28* but will add-up 3 days resulting in:
+
+```
+newDate("2017-1-31");        // Tue Jan 31 2017 00:00:00 GMT+0100 (Central Europe Standard Time)
+newDate("2017-1-31", "+1m"); // Fri Mar 03 2017 00:00:00 GMT+0100 (Central Europe Standard Time)
+```
 
 ___
 
-To recap:  
+### To recap:  
 
 **Date** is a value representing the start date.
 
